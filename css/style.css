@@ -1,0 +1,428 @@
+@import "./variable.css";
+@import "./utilities.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  cursor: url("../img/startup.png"), pointer;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--pure);
+  background: var(--primary);
+}
+
+.brand img {
+  width: 60px;
+}
+
+header {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2)),
+    url("../img/sunrise.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header nav {
+  padding: 20px 40px 20px 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+}
+
+header nav .nav-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .nav-right a {
+  text-decoration: none;
+  color: var(--pure);
+  margin-right: 30px;
+  position: relative;
+}
+
+header nav .nav-right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0%;
+  height: 2px;
+  background: var(--pure);
+  transition: width 0.3s ease-in-out;
+}
+
+header nav .nav-right a:hover::after {
+  width: 70%;
+  cursor: url("../img/astronaut_icon.png"), pointer;
+}
+
+header nav .nav-right a.active::after {
+  width: 70%;
+}
+
+header nav .nav-right .search > div {
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+
+header nav .nav-right .search > div input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+header nav .nav-right .search > div img {
+  padding-right: 16px;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------ Social icons -------------------------------------- */
+
+.social div {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  animation: moveIn 1s ease-in-out forwards;
+}
+
+@keyframes moveIn {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.social i {
+  color: var(--pure);
+}
+
+.fb:hover {
+  background-color: #3b5998;
+  transition: all 0.5s ease-in-out;
+  cursor: url("../img/astronaut_icon.png"), pointer;
+}
+
+.twitter:hover {
+  background-color: #00acee;
+  cursor: url("../img/astronaut_icon.png"), pointer;
+}
+
+.insta:hover {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  cursor: url("../img/astronaut_icon.png"), pointer;
+}
+
+.yt:hover {
+  background: #ff0000;
+  cursor: url("../img/astronaut_icon.png"), pointer;
+}
+
+.hero {
+  position: relative;
+}
+
+.social {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-right: 1px solid var(--gray);
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+/* ------------------------------------------------- hero ----------------------------------------------------------- */
+.hero .cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 80px);
+}
+
+.hero .cta h1 {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.left-section {
+  padding: 0 60px 0 30px;
+}
+
+.right-section img {
+  width: 500px;
+  transform: rotate(20deg);
+  animation: moveInSpace 12s ease-in-out infinite alternate;
+}
+
+@keyframes moveInSpace {
+  50% {
+    transform: translateY(-100px) rotate(-20deg) scale(0.8);
+  }
+}
+
+.btn {
+  border: 2px solid #ffffff;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 40px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  color: black;
+  cursor: url("../img/astronaut_icon.png"), pointer;
+}
+
+/* --------------------------------------- page2 ------------------------------- */
+
+.strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--dark);
+  padding: 30px 0;
+}
+
+section.rocket {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-gap: 80px;
+  padding: 100px 0;
+}
+
+section.rocket .block {
+  width: 90%;
+}
+
+section.rocket .block h1 {
+  font-size: 32px;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 38px;
+}
+
+section.rocket .block h1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--pure);
+}
+
+section.rocket .block h2 {
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 180px;
+}
+
+.rocket-btn {
+  margin-top: 20px;
+}
+
+#gslv {
+  padding-left: 0px;
+  position: relative;
+}
+
+#gslv::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--pure);
+}
+
+.more-data {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 160px;
+}
+
+.more-data h4,
+.thrust h4 {
+  font-size: 60px;
+}
+
+.more-data h3,
+.thrust h3 {
+  font-size: 10px;
+}
+
+.thrust {
+  margin-top: 50px;
+  padding-left: 20px;
+}
+
+small {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.engine-img {
+  padding-left: 200px;
+  margin-top: 50px;
+}
+
+/* --------------------------------------- rocket ------------------------------------------- */
+
+.rocket-body span {
+  position: relative;
+}
+
+.rocket-body span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  background: var(--pure);
+  width: 100px;
+}
+
+.rocket-body span:nth-child(1)::after {
+  bottom: 256px;
+  left: 90%;
+}
+
+.rocket-body span:nth-child(2)::after {
+  bottom: 538px;
+  left: -25%;
+}
+
+.rocket-body span:nth-child(3)::after {
+  bottom: 803px;
+  left: -25%;
+}
+
+/* ---------------------------------------- footer --------------------------------------------- */
+
+.copyright img {
+  width: 153px;
+}
+
+footer {
+  background: var(--dark);
+  padding: 60px 0;
+}
+
+footer > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.copyright span {
+  font-size: 12px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+footer h1 {
+  font-size: 18px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+footer h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--pure);
+}
+
+footer ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: var(--mild);
+  text-decoration: none;
+}
+
+.news > div {
+  background: var(--primary);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 50px;
+}
+
+.news > div input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.news .subs {
+  padding: 5px 20px;
+  border-radius: 50px;
+  border: none;
+  background: tomato;
+  outline: none;
+}
+
+/* ----------------------------------- scroll bar -------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 15px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #ff9933, #ffffff, #138808);
+}
+
+::selection {
+  background: tomato;
+}
