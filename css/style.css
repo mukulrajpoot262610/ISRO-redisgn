@@ -261,12 +261,12 @@ section.rocket .block h2 {
   margin-top: 20px;
 }
 
-#gslv {
+.underline {
   padding-left: 0px;
   position: relative;
 }
 
-#gslv::before {
+.underline::before {
   content: "";
   position: absolute;
   left: 0;
