@@ -212,6 +212,10 @@ header nav .nav-right .search > div img {
   cursor: url("../img/astronaut_icon.png"), pointer;
 }
 
+.next-btn {
+  float: right;
+}
+
 /* --------------------------------------- page2 ------------------------------- */
 
 .strip {
